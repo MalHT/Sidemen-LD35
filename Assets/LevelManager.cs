@@ -6,27 +6,24 @@ using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour {
 
-    public GameObject ImpassableTest1;
-    public GameObject BackgroundTest1;
-
     // deadforest, darkforest, infectedforest, lightforest
 
-    //public GameObject[] DeadForestFloor;
+    public GameObject[] DeadForestFloor;
     //public GameObject[] DarkForestFloor;
     //public GameObject[] InfectedForestFloor;
     //public GameObject[] LightForestFloor;
 
-    //public GameObject[] DeadForestWalls;
+    public GameObject[] DeadForestWalls;
     //public GameObject[] DarkForestWalls;
     //public GameObject[] InfectedForestWalls;
     //public GameObject[] LightForestWalls;
 
-    //public GameObject[] DeadForestInnerWalls;
+    public GameObject[] DeadForestInnerWalls;
     //public GameObject[] DarkForestInnerWalls;
     //public GameObject[] InfectedForestInnerWalls;
     //public GameObject[] LightForestInnerWalls;
 
-    //public GameObject[] DeadForestPath;
+    public GameObject[] DeadForestPath;
     //public GameObject[] DarkForestPath;
     //public GameObject[] InfectedForestPath;
     //public GameObject[] LightForestPath;
@@ -212,6 +209,13 @@ public class LevelManager : MonoBehaviour {
         return tiles;
     }
 
+    public Vector2 coordFilter(float i, float j)
+    {
+
+        return new Vector2(i * 0.32F, j * 0.32F);
+
+    }
+
     public void setupScene() { 
 }
 
@@ -223,22 +227,39 @@ public class LevelManager : MonoBehaviour {
         int levelRows = levelMatrix.GetLength(0);
         int levelCols = levelMatrix.GetLength(1);
 
-        for (var i = 0; i < levelRows - 1; i++)
+        for (var i = 0; i < levelRows; i++)
         {
-            for (var j = 0; j < levelCols - 1; j++)
+            for (var j = 0; j < levelCols; j++)
             {
+                // Walls
                 if (levelMatrix[i, j] == "w")
                 {
                     //Debug.Log("Wall");
 
-                    Instantiate(ImpassableTest1, new Vector2(i, j), Quaternion.identity);
+                    Instantiate(DeadForestWalls[0], coordFilter(i, j), Quaternion.identity);
 
                 }
 
+
+                // "Obstacle" or innerwalls
                 if (levelMatrix[i, j] == "o")
                 {
 
-                    Instantiate(BackgroundTest1, new Vector2(i, j), Quaternion.identity);
+                    Instantiate(DeadForestInnerWalls[0], coordFilter(i, j), Quaternion.identity);
+
+                }
+
+                if (levelMatrix[i, j] == "p")
+                {
+
+                    Instantiate(DeadForestPath[0], coordFilter(i, j), Quaternion.identity);
+
+                }
+
+                if (levelMatrix[i, j] == " ")
+                {
+
+                    Instantiate(DeadForestFloor[0], coordFilter(i, j), Quaternion.identity);
 
                 }
 
