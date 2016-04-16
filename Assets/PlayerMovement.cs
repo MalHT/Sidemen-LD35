@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector2.up * speed);
-        }wd
+        }
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector2.down * speed);
