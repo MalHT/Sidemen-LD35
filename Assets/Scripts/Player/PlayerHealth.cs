@@ -10,8 +10,16 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         if (health <= 0) {
         }
 	
 	}
+    void OnTriggerEnter(Collider collision)
+    {
+        if(collision.name == "Enemy")
+        {
+            
+        }
+    }
 }
