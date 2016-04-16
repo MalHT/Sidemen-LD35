@@ -16,19 +16,22 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector2.left * speed);
-            gameObject.GetComponent<Animation>().Play("MovingLeft");
+            //gameObject.GetComponent<Animation>().Play("MovingLeft");
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector2.right * speed);
+            //gameObject.GetComponent<Animation>().Play("MovingRight");
         }
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector2.up * speed);
+            //gameObject.GetComponent<Animation>().Play("MovingUp");
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector2.down * speed);
+            //gameObject.GetComponent<Animation>().Play("MovingDown");
         }
     }
 
