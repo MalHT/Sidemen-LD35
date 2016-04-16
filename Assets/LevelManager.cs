@@ -212,7 +212,7 @@ public class LevelManager : MonoBehaviour {
     public Vector2 coordFilter(float i, float j)
     {
 
-        return new Vector2(i * 0.32F, j * 0.32F);
+        return new Vector2((j * 0.32F), -(i * 0.32F));
 
     }
 
@@ -222,7 +222,7 @@ public class LevelManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        string[,] levelMatrix = levelBaseGenerator(20, 20, 3);
+        string[,] levelMatrix = levelBaseGenerator(39, 39, 3);
 
         int levelRows = levelMatrix.GetLength(0);
         int levelCols = levelMatrix.GetLength(1);
@@ -265,6 +265,12 @@ public class LevelManager : MonoBehaviour {
 
             }
         }
+
+        GameObject player;
+
+        player = GameObject.Find("Player");
+
+        //player.transform.position = new Vector2(3,3)/*coordFilter(levelRows - 1, 5)*/;
 
         //Instantiate(ImpassableTest1, new Vector2(1, 1), Quaternion.identity);
 
