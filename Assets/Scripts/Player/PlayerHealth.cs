@@ -15,11 +15,11 @@ public class PlayerHealth : MonoBehaviour {
         }
 	
 	}
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter(Collider col)
     {
-        if(collision.name == "Enemy")
+        if(col.GetComponent<Collider>().name == "Enemy")
         {
-            
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 }
