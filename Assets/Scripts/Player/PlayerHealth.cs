@@ -15,11 +15,11 @@ public class PlayerHealth : MonoBehaviour {
         }
 	
 	}
-    void OnCollisionEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
 
 
