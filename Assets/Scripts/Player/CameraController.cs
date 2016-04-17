@@ -14,28 +14,23 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 
-        if (playerSearching)
-        {
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+        player = GameObject.FindGameObjectWithTag("Player");
 
-            if (players.Length > 0) {
+        camera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
 
-                player = players[0];
+            //transform.position = new Vector2(0, 0);
 
-                offset = transform.position - player.transform.position;
+            //Debug.Log("Found a player instance to track");
 
-                transform.position = player.transform.position + offset;
+            //player = players[0];
 
-                playerSearching = false;
+            //offset = transform.position - player.transform.position;
 
-            }
-            
-        }
-        else {
+            //transform.position = player.transform.position + offset;
 
-            transform.position = player.transform.position + offset;
+            //transform.LookAt(player.transform);
 
-        }
-	
-	}
+
+    }
 }
