@@ -9,7 +9,7 @@ TagManager:
   - TileInnerWalls
   - Enemy
   - TilePath
-  - BackgroundTile
+  - TileBackground
   - TileEntrance
   - TileExit
   layers:
