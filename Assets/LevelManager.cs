@@ -295,7 +295,7 @@ public class LevelManager : MonoBehaviour {
 
             GameObject[] enemyArray = { Slime };
 
-            renderLevel(39, 39, 3, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath, false);
+            renderLevel(39, 39, 7, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath, false);
         }
 
         if (levelNumber == 2)
@@ -303,10 +303,39 @@ public class LevelManager : MonoBehaviour {
 
             GameObject[] enemyArray = { Slime };
 
-            renderLevel(39, 39, 5, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath, true);
+            renderLevel(39, 39, 13, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath, true);
 
         }
 
+        if (levelNumber == 3)
+        {
+
+        }
+
+        if (levelNumber == 4)
+        {
+
+        }
+
+        if (levelNumber == 5)
+        {
+
+        }
+
+        if (levelNumber == 6)
+        {
+
+        }
+
+        if (levelNumber == 7)
+        {
+
+        }
+
+        if (levelNumber == 8)
+        {
+
+        }
 
     }
 
