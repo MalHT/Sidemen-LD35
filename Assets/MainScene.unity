@@ -557,6 +557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeadForestFloor:
   - {fileID: 114646, guid: fa98d003f6650a14581fcc0f7f3fd81b, type: 2}
+  - {fileID: 114646, guid: d172ba47d1f9a0447a4f19c0228e5dd8, type: 2}
+  - {fileID: 114646, guid: 693322abf2446854c9d0476bc9c4f891, type: 2}
   DeadForestWalls:
   - {fileID: 114646, guid: da0481d68e2a9654b849269c38a89b5f, type: 2}
   DeadForestInnerWalls:
