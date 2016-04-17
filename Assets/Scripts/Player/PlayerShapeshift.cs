@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerShapeshift : MonoBehaviour {
     public string form;
+    public int attack;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,9 @@ public class PlayerShapeshift : MonoBehaviour {
             {
                 form = "base";
                 gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-                gameObject.GetComponent<PlayerMovement>().speed = 0.1F;
+                gameObject.GetComponent<PlayerMovement>().speed = 0.05F;
+                gameObject.GetComponent<PlayerHealth>().defensePlayer = 10;
+                attack = 10;
             }
         }
         // Bear Form Switch
@@ -29,7 +32,9 @@ public class PlayerShapeshift : MonoBehaviour {
             {
                 form = "bear";
                 gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
-                gameObject.GetComponent<PlayerMovement>().speed = 0.05F;
+                gameObject.GetComponent<PlayerMovement>().speed = 0.025F;
+                gameObject.GetComponent<PlayerHealth>().defensePlayer = 7;
+                attack = 20;
             }
         }
         // Turtle Form Switch
@@ -39,7 +44,9 @@ public class PlayerShapeshift : MonoBehaviour {
             {
                 form = "turtle";
                 gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-                gameObject.GetComponent<PlayerMovement>().speed = 0.025F;
+                gameObject.GetComponent<PlayerMovement>().speed = 0.0125F;
+                gameObject.GetComponent<PlayerHealth>().defensePlayer = 15;
+                attack = 5;
             }
         }
         // Leopard Form Switch
@@ -49,7 +56,9 @@ public class PlayerShapeshift : MonoBehaviour {
             {
                 form = "leopard";
                 gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
-                gameObject.GetComponent<PlayerMovement>().speed = 0.2F;
+                gameObject.GetComponent<PlayerMovement>().speed = 0.075F;
+                gameObject.GetComponent<PlayerHealth>().defensePlayer = 5;
+                attack = 5;
             }
         }
 

@@ -26,7 +26,8 @@ public class PlayerDamage : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            other.gameObject.GetComponent<PlayerHealth>().healthPlayer = other.gameObject.GetComponent<PlayerHealth>().healthPlayer - 20;
+            int damageDone = 20 - other.gameObject.GetComponent<PlayerHealth>().defensePlayer;
+            other.gameObject.GetComponent<PlayerHealth>().healthPlayer = other.gameObject.GetComponent<PlayerHealth>().healthPlayer - damageDone;
             Debug.Log(other.gameObject.GetComponent<PlayerHealth>().healthPlayer);
             
 
