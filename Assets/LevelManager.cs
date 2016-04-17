@@ -258,6 +258,21 @@ public class LevelManager : MonoBehaviour {
             Destroy(go);
         }
 
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("TileWalls"))
+        {
+            Destroy(go);
+        }
+
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("TileInnerWalls"))
+        {
+            Destroy(go);
+        }
+
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("TilePath"))
+        {
+            Destroy(go);
+        }
+
     }
 
     public void makeLevelNumber(int levelNumber)
