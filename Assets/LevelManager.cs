@@ -35,6 +35,9 @@ public class LevelManager : MonoBehaviour {
     public GameObject Entrance;
     public GameObject Exit;
 
+    // Player
+    public GameObject Player;
+
     public class Level
     {
         public int Rows;
@@ -292,7 +295,7 @@ public class LevelManager : MonoBehaviour {
 
             GameObject[] enemyArray = { Slime };
 
-            renderLevel(39, 39, 3, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath);
+            renderLevel(39, 39, 3, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath, false);
         }
 
         if (levelNumber == 2)
@@ -300,7 +303,7 @@ public class LevelManager : MonoBehaviour {
 
             GameObject[] enemyArray = { Slime };
 
-            renderLevel(39, 39, 5, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath);
+            renderLevel(39, 39, 5, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath, true);
 
         }
 
@@ -309,7 +312,7 @@ public class LevelManager : MonoBehaviour {
 
     // Render level tiles and spawn player and monsters
 
-    public void renderLevel(int rows, int cols, int enemyNum, GameObject[] enemyTypes, GameObject[] walls, GameObject[] floor, GameObject[] innerWalls, GameObject[] path)
+    public void renderLevel(int rows, int cols, int enemyNum, GameObject[] enemyTypes, GameObject[] walls, GameObject[] floor, GameObject[] innerWalls, GameObject[] path, bool playerExists)
     {
         string[,] levelMatrix = levelBaseGenerator(rows, cols, enemyNum);
 
@@ -367,6 +370,11 @@ public class LevelManager : MonoBehaviour {
 
                     Instantiate(Entrance, coordFilter(i, j), Quaternion.identity);
 
+                    if (!playerExists)
+                    {
+                        Instantiate(Player, coordFilter(i, j), Quaternion.identity);
+                    }
+
                 }
 
                 if (levelMatrix[i, j] == "M")
@@ -385,7 +393,7 @@ public class LevelManager : MonoBehaviour {
 
         GameObject player;
 
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
 
         GameObject entrance;
 
