@@ -28,6 +28,9 @@ public class LevelManager : MonoBehaviour {
     //public GameObject[] InfectedForestPath;
     //public GameObject[] LightForestPath;
 
+    public GameObject Entrance;
+    public GameObject Exit;
+
     public class Level
     {
         public int Rows;
@@ -249,6 +252,7 @@ public class LevelManager : MonoBehaviour {
 
                 }
 
+                // "path"
                 if (levelMatrix[i, j] == "p")
                 {
 
@@ -256,10 +260,26 @@ public class LevelManager : MonoBehaviour {
 
                 }
 
+                // empty
                 if (levelMatrix[i, j] == " ")
                 {
 
                     Instantiate(DeadForestFloor[0], coordFilter(i, j), Quaternion.identity);
+
+                }
+
+                // "eXit"
+                if (levelMatrix[i, j] == "x")
+                {
+
+                    Instantiate(Exit, coordFilter(i, j), Quaternion.identity);
+
+                }
+
+                if (levelMatrix[i, j] == "s")
+                {
+
+                    Instantiate(Entrance, coordFilter(i, j), Quaternion.identity);
 
                 }
 
@@ -270,10 +290,13 @@ public class LevelManager : MonoBehaviour {
 
         player = GameObject.Find("Player");
 
-        //player.transform.position = new Vector2(3,3)/*coordFilter(levelRows - 1, 5)*/;
+        GameObject entrance;
 
-        //Instantiate(ImpassableTest1, new Vector2(1, 1), Quaternion.identity);
+        entrance = GameObject.FindGameObjectWithTag("TileEntrance");
 
+        player.transform.position = entrance.transform.position;
+
+        // This is here because it can be
         Console.WriteLine("Hello!");
 
     }
