@@ -28,6 +28,9 @@ public class LevelManager : MonoBehaviour {
     //public GameObject[] InfectedForestPath;
     //public GameObject[] LightForestPath;
 
+    public GameObject Entrance;
+    public GameObject Exit;
+
     public class Level
     {
         public int Rows;
@@ -249,6 +252,7 @@ public class LevelManager : MonoBehaviour {
 
                 }
 
+                // "path"
                 if (levelMatrix[i, j] == "p")
                 {
 
@@ -256,10 +260,26 @@ public class LevelManager : MonoBehaviour {
 
                 }
 
+                // empty
                 if (levelMatrix[i, j] == " ")
                 {
 
                     Instantiate(DeadForestFloor[0], coordFilter(i, j), Quaternion.identity);
+
+                }
+
+                // "eXit"
+                if (levelMatrix[i, j] == "x")
+                {
+
+                    Instantiate(Exit, coordFilter(i, j), Quaternion.identity);
+
+                }
+
+                if (levelMatrix[i, j] == "s")
+                {
+
+                    Instantiate(Entrance, coordFilter(i, j), Quaternion.identity);
 
                 }
 
