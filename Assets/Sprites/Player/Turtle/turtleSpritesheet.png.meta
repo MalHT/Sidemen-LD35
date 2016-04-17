@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 1f01c7f60ca68c8418aa0a0d927a0a8b
-timeCreated: 1460901970
+guid: 176b38a26de30fb4e9cc742d4b9efdb4
+timeCreated: 1460901834
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: baseSpritesheet_0
-    21300002: baseSpritesheet_1
-    21300004: baseSpritesheet_2
-    21300006: baseSpritesheet_3
-    21300008: baseSpritesheet_4
-    21300010: baseSpritesheet_5
-    21300012: baseSpritesheet_6
-    21300014: baseSpritesheet_7
-    21300016: baseSpritesheet_8
-    21300018: baseSpritesheet_9
-    21300020: baseSpritesheet_10
-    21300022: baseSpritesheet_11
-    21300024: baseSpritesheet_12
-    21300026: baseSpritesheet_13
-    21300028: baseSpritesheet_14
-    21300030: baseSpritesheet_15
+    21300000: turtleSpritesheet_0
+    21300002: turtleSpritesheet_1
+    21300004: turtleSpritesheet_2
+    21300006: turtleSpritesheet_3
+    21300008: turtleSpritesheet_4
+    21300010: turtleSpritesheet_5
+    21300012: turtleSpritesheet_6
+    21300014: turtleSpritesheet_7
+    21300016: turtleSpritesheet_8
+    21300018: turtleSpritesheet_9
+    21300020: turtleSpritesheet_10
+    21300022: turtleSpritesheet_11
+    21300024: turtleSpritesheet_12
+    21300026: turtleSpritesheet_13
+    21300028: turtleSpritesheet_14
+    21300030: turtleSpritesheet_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -66,7 +66,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: baseSpritesheet_0
+    - name: turtleSpritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -77,35 +77,33 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: 16}
-        - {x: -11, y: 13}
-        - {x: -11, y: 4}
-        - {x: -7, y: -16}
-        - {x: 6, y: -16}
-        - {x: 11, y: 3}
-        - {x: 11, y: 13}
-        - {x: 10, y: 16}
-    - name: baseSpritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 6, y: 16}
-        - {x: -7, y: 16}
-        - {x: -11, y: 12}
+      - - {x: -11, y: 16}
         - {x: -11, y: -3}
-        - {x: -5, y: -16}
+        - {x: -8, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -13}
+        - {x: 11, y: 16}
+    - name: turtleSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 16}
+        - {x: -9, y: 15}
+        - {x: -11, y: 13}
+        - {x: -11, y: -6}
+        - {x: -9, y: -16}
         - {x: 4, y: -16}
-        - {x: 11, y: 1}
-        - {x: 11, y: 13}
-        - {x: 10, y: 14}
-    - name: baseSpritesheet_2
+        - {x: 11, y: -11}
+        - {x: 11, y: 12}
+        - {x: 8, y: 16}
+    - name: turtleSpritesheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -116,19 +114,35 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: 16}
-        - {x: -11, y: 13}
-        - {x: -11, y: 4}
-        - {x: -7, y: -16}
-        - {x: 6, y: -16}
-        - {x: 11, y: 3}
-        - {x: 11, y: 13}
-        - {x: 10, y: 16}
-    - name: baseSpritesheet_3
+      - - {x: -11, y: 16}
+        - {x: -11, y: -3}
+        - {x: -8, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -13}
+        - {x: 11, y: 16}
+    - name: turtleSpritesheet_3
       rect:
         serializedVersion: 2
         x: 96
         y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 16}
+        - {x: -11, y: -9}
+        - {x: -9, y: -15}
+        - {x: -8, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: 15}
+        - {x: 10, y: 16}
+    - name: turtleSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -136,35 +150,14 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 6, y: 16}
-        - {x: -7, y: 16}
-        - {x: -11, y: 13}
-        - {x: -11, y: -2}
-        - {x: -6, y: -12}
-        - {x: -2, y: -16}
+        - {x: -5, y: 16}
+        - {x: -11, y: 10}
+        - {x: -11, y: 9}
+        - {x: -4, y: -16}
         - {x: 5, y: -16}
-        - {x: 11, y: 4}
+        - {x: 11, y: -7}
         - {x: 11, y: 11}
-        - {x: 10, y: 14}
-    - name: baseSpritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 16}
-        - {x: -11, y: 11}
-        - {x: -11, y: 8}
-        - {x: -6, y: -16}
-        - {x: 5, y: -16}
-        - {x: 11, y: 3}
-        - {x: 11, y: 10}
-        - {x: 7, y: 16}
-    - name: baseSpritesheet_5
+    - name: turtleSpritesheet_5
       rect:
         serializedVersion: 2
         x: 32
@@ -175,13 +168,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -6, y: 16}
-        - {x: -11, y: 9}
-        - {x: -11, y: -16}
+      - - {x: -8, y: 16}
+        - {x: -12, y: 11}
+        - {x: -12, y: -16}
         - {x: 11, y: -16}
-        - {x: 11, y: 13}
-        - {x: 4, y: 16}
-    - name: baseSpritesheet_6
+        - {x: 11, y: 14}
+        - {x: 6, y: 16}
+    - name: turtleSpritesheet_6
       rect:
         serializedVersion: 2
         x: 64
@@ -192,15 +185,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -5, y: 16}
-        - {x: -11, y: 11}
-        - {x: -11, y: 8}
-        - {x: -6, y: -16}
+      - - {x: 6, y: 16}
+        - {x: -5, y: 16}
+        - {x: -11, y: 10}
+        - {x: -11, y: 9}
+        - {x: -4, y: -16}
         - {x: 5, y: -16}
-        - {x: 11, y: 3}
-        - {x: 11, y: 10}
-        - {x: 7, y: 16}
-    - name: baseSpritesheet_7
+        - {x: 11, y: -7}
+        - {x: 11, y: 11}
+    - name: turtleSpritesheet_7
       rect:
         serializedVersion: 2
         x: 96
@@ -211,13 +204,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -6, y: 16}
-        - {x: -11, y: 9}
-        - {x: -11, y: -16}
+      - - {x: -8, y: 16}
+        - {x: -12, y: 11}
+        - {x: -12, y: -16}
         - {x: 11, y: -16}
-        - {x: 11, y: 13}
-        - {x: 4, y: 16}
-    - name: baseSpritesheet_8
+        - {x: 11, y: 14}
+        - {x: 6, y: 16}
+    - name: turtleSpritesheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -228,15 +221,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 16}
-        - {x: -11, y: 13}
-        - {x: -11, y: 4}
-        - {x: -6, y: -16}
-        - {x: 6, y: -16}
+      - - {x: -10, y: 16}
+        - {x: -11, y: 15}
+        - {x: -11, y: -8}
+        - {x: -8, y: -16}
+        - {x: 9, y: -16}
         - {x: 11, y: -2}
         - {x: 11, y: 14}
-        - {x: 8, y: 16}
-    - name: baseSpritesheet_9
+        - {x: 9, y: 16}
+    - name: turtleSpritesheet_9
       rect:
         serializedVersion: 2
         x: 32
@@ -247,15 +240,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -7, y: 16}
-        - {x: -11, y: 12}
-        - {x: -11, y: 3}
-        - {x: -7, y: -13}
-        - {x: -2, y: -16}
-        - {x: 7, y: -16}
-        - {x: 11, y: -10}
+      - - {x: -11, y: 16}
+        - {x: -11, y: -10}
+        - {x: -4, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -12}
         - {x: 11, y: 16}
-    - name: baseSpritesheet_10
+    - name: turtleSpritesheet_10
       rect:
         serializedVersion: 2
         x: 64
@@ -266,15 +257,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 16}
-        - {x: -11, y: 13}
-        - {x: -11, y: 4}
-        - {x: -6, y: -16}
-        - {x: 6, y: -16}
+      - - {x: -10, y: 16}
+        - {x: -11, y: 15}
+        - {x: -11, y: -8}
+        - {x: -8, y: -16}
+        - {x: 9, y: -16}
         - {x: 11, y: -2}
         - {x: 11, y: 14}
-        - {x: 8, y: 16}
-    - name: baseSpritesheet_11
+        - {x: 9, y: 16}
+    - name: turtleSpritesheet_11
       rect:
         serializedVersion: 2
         x: 96
@@ -285,17 +276,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 5, y: 16}
-        - {x: -4, y: 16}
-        - {x: -10, y: 15}
+      - - {x: -8, y: 16}
         - {x: -11, y: 12}
-        - {x: -11, y: 4}
-        - {x: -6, y: -16}
+        - {x: -11, y: -8}
+        - {x: -8, y: -16}
         - {x: 3, y: -16}
-        - {x: 6, y: -12}
-        - {x: 11, y: 6}
-        - {x: 11, y: 12}
-    - name: baseSpritesheet_12
+        - {x: 11, y: -10}
+        - {x: 11, y: 14}
+        - {x: 7, y: 16}
+    - name: turtleSpritesheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -306,15 +295,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -6, y: 16}
-        - {x: -11, y: 10}
-        - {x: -11, y: 3}
-        - {x: -4, y: -16}
-        - {x: 6, y: -16}
-        - {x: 11, y: 4}
-        - {x: 11, y: 12}
+      - - {x: -11, y: 16}
+        - {x: -11, y: -5}
+        - {x: -8, y: -16}
+        - {x: 4, y: -16}
+        - {x: 11, y: 2}
+        - {x: 11, y: 14}
         - {x: 6, y: 16}
-    - name: baseSpritesheet_13
+    - name: turtleSpritesheet_13
       rect:
         serializedVersion: 2
         x: 32
@@ -325,12 +313,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 16}
-        - {x: -11, y: 13}
-        - {x: -11, y: -16}
-        - {x: 11, y: -16}
-        - {x: 11, y: 16}
-    - name: baseSpritesheet_14
+      - - {x: -6, y: 16}
+        - {x: -11, y: 10}
+        - {x: -11, y: -8}
+        - {x: -10, y: -16}
+        - {x: 12, y: -16}
+        - {x: 12, y: 14}
+        - {x: 6, y: 16}
+    - name: turtleSpritesheet_14
       rect:
         serializedVersion: 2
         x: 64
@@ -341,15 +331,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -6, y: 16}
-        - {x: -11, y: 10}
-        - {x: -11, y: 3}
-        - {x: -4, y: -16}
-        - {x: 6, y: -16}
-        - {x: 11, y: 4}
-        - {x: 11, y: 12}
+      - - {x: -11, y: 16}
+        - {x: -11, y: -5}
+        - {x: -8, y: -16}
+        - {x: 4, y: -16}
+        - {x: 11, y: 2}
+        - {x: 11, y: 14}
         - {x: 6, y: 16}
-    - name: baseSpritesheet_15
+    - name: turtleSpritesheet_15
       rect:
         serializedVersion: 2
         x: 96
@@ -360,11 +349,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 16}
-        - {x: -11, y: 13}
-        - {x: -11, y: -16}
-        - {x: 11, y: -16}
-        - {x: 11, y: 16}
+      - - {x: -6, y: 16}
+        - {x: -11, y: 10}
+        - {x: -11, y: -8}
+        - {x: -10, y: -16}
+        - {x: 12, y: -16}
+        - {x: 12, y: 14}
+        - {x: 6, y: 16}
     outline: []
   spritePackingTag: 
   userData: 
