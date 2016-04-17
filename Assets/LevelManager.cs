@@ -290,10 +290,13 @@ public class LevelManager : MonoBehaviour {
 
         player = GameObject.Find("Player");
 
-        //player.transform.position = new Vector2(3,3)/*coordFilter(levelRows - 1, 5)*/;
+        GameObject entrance;
 
-        //Instantiate(ImpassableTest1, new Vector2(1, 1), Quaternion.identity);
+        entrance = GameObject.FindGameObjectWithTag("TileEntrance");
 
+        player.transform.position = entrance.transform.position;
+
+        // This is here because it can be
         Console.WriteLine("Hello!");
 
     }

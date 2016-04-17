@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - TilePath
   - BackgroundTile
+  - TileEntrance
+  - TileExit
   layers:
   - Default
   - TransparentFX
