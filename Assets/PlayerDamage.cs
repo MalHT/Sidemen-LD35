@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerDamage : MonoBehaviour {
-    public Transform Player;
+    //public Transform Player;
     public float ChaseSpeed = 0.05f;
     public float Range = 0.05f;
     float CurrentSpeed;
@@ -14,10 +14,13 @@ public class PlayerDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Vector3.Distance(transform.position, Player.position) <= Range) // check the distance between this game object and Player and continue if it's less than Range
+
+        GameObject Player = GameObject.FindGameObjectWithTag("Player");
+
+        if (Vector3.Distance(transform.position, Player.transform.position) <= Range) // check the distance between this game object and Player and continue if it's less than Range
         {
             CurrentSpeed = ChaseSpeed * Time.deltaTime; // set the CurrentSpeed to ChaseSpeed and multiply by Time.deltaTime (this prevents it from moving based on FPS)
-            transform.position = Vector3.MoveTowards(transform.position, Player.position, CurrentSpeed);  // set this game objects position to the Player's position at the speed of CurrentSpeed
+            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, CurrentSpeed);  // set this game objects position to the Player's position at the speed of CurrentSpeed
         }
 
     }
