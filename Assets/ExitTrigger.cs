@@ -10,7 +10,11 @@ public class ExitTrigger : MonoBehaviour {
 
         // if collides with player (todo)
 
-        gameManager.nextLevel();
+        if (other.tag == "Player") { 
+
+            gameManager.nextLevel();
+
+        }
 
     }
 
