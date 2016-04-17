@@ -28,6 +28,10 @@ public class LevelManager : MonoBehaviour {
     //public GameObject[] InfectedForestPath;
     //public GameObject[] LightForestPath;
 
+    // Enemies
+    public GameObject Slime;
+
+    // Entrance and exit tiles
     public GameObject Entrance;
     public GameObject Exit;
 
@@ -218,14 +222,81 @@ public class LevelManager : MonoBehaviour {
         return new Vector2((j * 0.32F), -(i * 0.32F));
 
     }
+    
+    public void cleanupLevel()
+    {
 
-    public void setupScene() { 
-}
+        //GameObject[] enemies;
+        //GameObject[] entrance;
+        //GameObject[] exit;
+        //GameObject[] background;
 
-    // Use this for initialization
-    void Start () {
+        // Remove enemy, tileEntrance, tileExit, tileBackground
+        
+        //enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        //entrance = GameObject.FindGameObjectsWithTag("TileEntrance");
+        //exit = GameObject.FindGameObjectsWithTag("TileExit");
+        //background = GameObject.FindGameObjectsWithTag("TileBackground");
 
-        string[,] levelMatrix = levelBaseGenerator(39, 39, 3);
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(go);
+        }
+
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("TileEntrance"))
+        {
+            Destroy(go);
+        }
+
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("TileExit"))
+        {
+            Destroy(go);
+        }
+
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("TileBackground"))
+        {
+            Destroy(go);
+        }
+
+    }
+
+    public void makeLevelNumber(int levelNumber)
+    {
+
+        // walls, floor, path, monsters, and shit
+
+        Debug.Log(levelNumber);
+
+        if (levelNumber > 1)
+        {
+            cleanupLevel();
+        }
+
+        if (levelNumber == 1)
+        {
+
+            GameObject[] enemyArray = { Slime };
+
+            renderLevel(39, 39, 3, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath);
+        }
+
+        if (levelNumber == 2)
+        {
+
+            GameObject[] enemyArray = { Slime };
+
+            renderLevel(39, 39, 5, enemyArray, DeadForestWalls, DeadForestFloor, DeadForestInnerWalls, DeadForestPath);
+
+        }
+
+
+    }
+
+    // Render level tiles and spawn player and monsters
+
+    public void renderLevel(int rows, int cols, int enemyNum, GameObject[] enemyTypes, GameObject[] walls, GameObject[] floor, GameObject[] innerWalls, GameObject[] path)
+    {
+        string[,] levelMatrix = levelBaseGenerator(rows, cols, enemyNum);
 
         int levelRows = levelMatrix.GetLength(0);
         int levelCols = levelMatrix.GetLength(1);
@@ -283,6 +354,14 @@ public class LevelManager : MonoBehaviour {
 
                 }
 
+                if (levelMatrix[i, j] == "M")
+                {
+
+                    Instantiate(DeadForestFloor[0], coordFilter(i, j), Quaternion.identity);
+
+
+                }
+
             }
         }
 
@@ -298,6 +377,14 @@ public class LevelManager : MonoBehaviour {
 
         // This is here because it can be
         Console.WriteLine("Hello!");
+    }
+
+
+    // Use this for initialization
+    void Start () {
+
+        Debug.Log("Making level 1");
+        makeLevelNumber(1);
 
     }
 	
