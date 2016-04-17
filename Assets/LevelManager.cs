@@ -325,7 +325,7 @@ public class LevelManager : MonoBehaviour {
                 {
                     //Debug.Log("Wall");
 
-                    Instantiate(DeadForestWalls[0], coordFilter(i, j), Quaternion.identity);
+                    Instantiate(walls[Random.Range(0, walls.Length - 1)], coordFilter(i, j), Quaternion.identity);
 
                 }
 
@@ -334,7 +334,7 @@ public class LevelManager : MonoBehaviour {
                 if (levelMatrix[i, j] == "o")
                 {
 
-                    Instantiate(DeadForestInnerWalls[0], coordFilter(i, j), Quaternion.identity);
+                    Instantiate(innerWalls[Random.Range(0, innerWalls.Length - 1)], coordFilter(i, j), Quaternion.identity);
 
                 }
 
@@ -342,7 +342,7 @@ public class LevelManager : MonoBehaviour {
                 if (levelMatrix[i, j] == "p")
                 {
 
-                    Instantiate(DeadForestPath[0], coordFilter(i, j), Quaternion.identity);
+                    Instantiate(path[Random.Range(0, path.Length - 1)], coordFilter(i, j), Quaternion.identity);
 
                 }
 
@@ -350,7 +350,7 @@ public class LevelManager : MonoBehaviour {
                 if (levelMatrix[i, j] == " ")
                 {
 
-                    Instantiate(DeadForestFloor[0], coordFilter(i, j), Quaternion.identity);
+                    Instantiate(floor[Random.Range(0, floor.Length - 1)], coordFilter(i, j), Quaternion.identity);
 
                 }
 
@@ -372,8 +372,11 @@ public class LevelManager : MonoBehaviour {
                 if (levelMatrix[i, j] == "M")
                 {
 
-                    Instantiate(DeadForestFloor[0], coordFilter(i, j), Quaternion.identity);
+                    Instantiate(path[Random.Range(0, path.Length - 1)], coordFilter(i, j), Quaternion.identity);
 
+                    // Instantiate random monster from monsters array
+
+                    Instantiate(enemyTypes[Random.Range(0, enemyTypes.Length - 1)], coordFilter(i, j), Quaternion.identity);
 
                 }
 
